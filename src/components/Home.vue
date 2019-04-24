@@ -27,7 +27,38 @@
         </ul>
       </li>
     </ul>
+<div style="width: calc(100% - 220px);height:calc(100% - 50px);float: right;">
 
+  <el-table
+    :data="productList"
+    style="width: 100%">
+
+    <el-table-column
+      prop="name"
+      label="名称"
+      align="center"
+      width="580">
+    </el-table-column>
+    <el-table-column
+      prop="subtitle"
+      label="标题"
+      align="center"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="status"
+      label="状态"
+      align="center"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="price"
+      label="价格"
+      align="center"
+      >
+    </el-table-column>
+  </el-table>
+</div>
 
   </div>
 </template>
@@ -181,6 +212,7 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    float: left;
   }
 
   .liClass {

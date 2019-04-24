@@ -63,6 +63,24 @@ export const get_information = (params) => {
   }
 }
 
+export const update_information = (params) => {
+  try {
+    return axios.post('/user/update_information.do',
+      params)
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+export const resetPassword = (params) => {
+  try {
+    return axios.post('/user/resetPassword.do',
+      params)
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 export const getProductList = (params) => axios.get('/product/list.do', {params});
 
 export const get_deep_category = (params) => axios.get('/manage/category/get_deep_category.do', {params});
