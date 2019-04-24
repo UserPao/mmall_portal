@@ -1,0 +1,354 @@
+/*淡入淡出  fade*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/*右边 进/出  slide-fade-right*/
+.slide-fade-right-enter-active,.slide-fade-right-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-right-enter, .slide-fade-right-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+/*左边 进/出  slide-fade-left*/
+.slide-fade-left-enter-active,.slide-fade-left-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-left-enter, .slide-fade-left-leave-to {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+/*左出右进 slide-fade-rightleft*/
+.slide-fade-rightleft-enter-active,.slide-fade-rightleft-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-rightleft-enter {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.slide-fade-rightleft-leave-to{
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+
+/*放大缩小 bounce*/
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    /*transform: scale(1.);*/
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.line-enter-active, .line-leave-active {
+  transition: all .5s;
+}
+.line-enter, .line-leave-to {
+  opacity: 0;
+  transform: scaleY(0.5);
+}
+
+.fadeToLeftTan-active{
+  animation: fadeToLeftTan .5s;
+}
+
+/*向左移动并弹性显示*/
+@-webkit-keyframes fadeToLeftTan{
+  0%{ -webkit-transform:translateX(100%); opacity:0;}
+  70%{ -webkit-transform:translateX(-5%); opacity:1;}
+  80%{ -webkit-transform:translateX(2%); opacity:1;}
+  90%{ -webkit-transform:translateX(-2%); opacity:1;}
+  100%{ -webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes fadeToLeftTan{
+  0%{ transform:translateX(100%); opacity:0;}
+  70%{ transform:translateX(-5%); opacity:1;}
+  80%{ transform:translateX(2%); opacity:1;}
+  90%{ transform:translateX(-2%); opacity:1;}
+  100%{ transform:translateX(0); opacity:1;}
+}
+.fadeToRightTan-active{
+  animation: fadeToRightTan .5s;
+}
+/*向右移动并弹性显示*/
+@-webkit-keyframes fadeToRightTan{
+  0%{ -webkit-transform:translateX(-100%); opacity:0;}
+  70%{ -webkit-transform:translateX(5%); opacity:1;}
+  80%{ -webkit-transform:translateX(-2%); opacity:1;}
+  90%{ -webkit-transform:translateX(2%); opacity:1;}
+  100%{ -webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes fadeToRightTan{
+  0%{ transform:translateX(-100%); opacity:0;}
+  70%{ transform:translateX(5%); opacity:1;}
+  80%{ transform:translateX(-2%); opacity:1;}
+  90%{ transform:translateX(2%); opacity:1;}
+  100%{ transform:translateX(0); opacity:1;}
+}
+
+.fadeToTopTan-active{
+  animation: fadeToTopTan .5s;
+}
+/*向上移动并弹性显示*/
+@-webkit-keyframes fadeToTopTan{
+  0%{ -webkit-transform:translateY(100%); opacity:0;}
+  70%{ -webkit-transform:translateY(-5%); opacity:1;}
+  80%{ -webkit-transform:translateY(2%); opacity:1;}
+  90%{ -webkit-transform:translateY(-2%); opacity:1;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToTopTan{
+  0%{ transform:translateY(100%); opacity:0;}
+  70%{ transform:translateY(-5%); opacity:1;}
+  80%{ transform:translateY(2%); opacity:1;}
+  90%{ transform:translateY(-2%); opacity:1;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+.fadeToDownTan-active{
+  animation: fadeToDownTan .5s;
+}
+/*向下移动并弹性显示*/
+@-webkit-keyframes fadeToDownTan{
+  0%{ -webkit-transform:translateY(-100%); opacity:0;}
+  70%{ -webkit-transform:translateY(5%); opacity:1;}
+  80%{ -webkit-transform:translateY(-2%); opacity:1;}
+  90%{ -webkit-transform:translateY(2%); opacity:1;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToDownTan{
+  0%{ transform:translateY(-100%); opacity:0;}
+  70%{ transform:translateY(5%); opacity:1;}
+  80%{ transform:translateY(-2%); opacity:1;}
+  90%{ transform:translateY(2%); opacity:1;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+
+.fadeToDown-active{
+  animation: fadeToDown .5s;
+}
+/*向下移动显示*/
+@-webkit-keyframes fadeToDown{
+  0%{ -webkit-transform:translateY(-100%); opacity:0;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToDown{
+  0%{ transform:translateY(-100%); opacity:0;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+
+.fadeInMaxToMinTan-active{
+  animation: fadeInMaxToMinTan .5s;
+}
+/*从大向小变化弹性显示*/
+@-webkit-keyframes fadeInMaxToMinTan{
+  0%{ -webkit-transform:scale(2); opacity:0;}
+  70%{ -webkit-transform:scale(.9); opacity:1;}
+  85%{ -webkit-transform:scale(1.1); opacity:1;}
+  100%{ -webkit-transform:scale(1); opacity:1;}
+}
+@keyframes fadeInMaxToMinTan{
+  0%{ transform:scale(2); opacity:0;}
+  70%{ transform:scale(.9); opacity:1;}
+  85%{ transform:scale(1.1); opacity:1;}
+  100%{ transform:scale(1); opacity:1;}
+}
+.fadeInMinToMaxTan-active{
+  animation: fadeInMinToMaxTan .5s;
+}
+/*从小向大变化弹性显示*/
+@-webkit-keyframes fadeInMinToMaxTan{
+  0%{ -webkit-transform:scale(0); opacity:0;}
+  70%{ -webkit-transform:scale(1.1); opacity:1;}
+  85%{ -webkit-transform:scale(.9); opacity:1;}
+  100%{ -webkit-transform:scale(1); opacity:1;}
+}
+@keyframes fadeInMinToMaxTan{
+  0%{ transform:scale(0); opacity:0;}
+  70%{ transform:scale(1.1); opacity:1;}
+  85%{ transform:scale(.9); opacity:1;}
+  100%{ transform:scale(1); opacity:1;}
+}
+
+/**********************************/
+.fadeToLeft-active{
+  animation: fadeToLeft .5s;
+}
+/*向左移动显示*/
+@-webkit-keyframes fadeToLeft{
+  0%{ -webkit-transform:translateX(100%); opacity:0;}
+  100%{ -webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes fadeToLeft{
+  0%{ transform:translateX(100%); opacity:0;}
+  100%{ transform:translateX(0); opacity:1;}
+}
+.fadeToRight-active{
+  animation: fadeToRight .5s;
+}
+/*向右移动显示*/
+@-webkit-keyframes fadeToRight{
+  0%{ -webkit-transform:translateX(-100%); opacity:0;}
+  100%{ -webkit-transform:translateX(0); opacity:1;}
+}
+@keyframes fadeToRight{
+  0%{ transform:translateX(-100%); opacity:0;}
+  100%{ transform:translateX(0); opacity:1;}
+}
+.fadeToTop-active{
+  animation: fadeToTop .5s;
+}
+/*向上移动显示*/
+@-webkit-keyframes fadeToTop{
+  0%{ -webkit-transform:translateY(100%); opacity:0;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToTop{
+  0%{ transform:translateY(100%); opacity:0;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+.fadeToTop60-active{
+  animation: fadeToTop60 .5s;
+}
+/*向上60移动显示*/
+@-webkit-keyframes fadeToTop60{
+  0%{ -webkit-transform:translateY(60px); opacity:0;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToTop60{
+  0%{ transform:translateY(60px); opacity:0;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+.fadeToDown-active{
+  animation: fadeToDown .5s;
+}
+/*向下移动显示*/
+@-webkit-keyframes fadeToDown{
+  0%{ -webkit-transform:translateY(-100%); opacity:0;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToDown{
+  0%{ transform:translateY(-100%); opacity:0;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+.fadeToDown60-active{
+  animation: fadeToDown60 .5s;
+}
+/*向下60移动显示*/
+@-webkit-keyframes fadeToDown60{
+  0%{ -webkit-transform:translateY(-60px); opacity:0;}
+  100%{ -webkit-transform:translateY(0); opacity:1;}
+}
+@keyframes fadeToDown60{
+  0%{ transform:translateY(-60px); opacity:0;}
+  100%{ transform:translateY(0); opacity:1;}
+}
+
+/**********************************/
+.flashTopDown-active{
+  animation: flashTopDown .5s;
+}
+/*上下微移漂浮*/
+@-webkit-keyframes flashTopDown{
+  0%{ -webkit-transform:translateY(0); opacity:1;}
+  100%{ -webkit-transform:translateY(8px); opacity:.8;}
+}
+@keyframes flashTopDown{
+  0%{ transform:translateY(0); opacity:1;}
+  100%{ transform:translateY(8px); opacity:.8;}
+}
+
+/**********************************/
+.fadeInMaxToMin-active{
+  animation: fadeInMaxToMin .5s;
+}
+/*从大向小变化显示*/
+@-webkit-keyframes fadeInMaxToMin{
+  0%{ -webkit-transform:scale(2); opacity:0;}
+  100%{ -webkit-transform:scale(1); opacity:1;}
+}
+@keyframes fadeInMaxToMin{
+  0%{ transform:scale(2); opacity:0;}
+  100%{ transform:scale(1); opacity:1;}
+}
+.fadeInMinToMax-active{
+  animation: fadeInMinToMax .5s;
+}
+/*从小向大变化显示*/
+@-webkit-keyframes fadeInMinToMax{
+  0%{ -webkit-transform:scale(0); opacity:0;}
+  100%{ -webkit-transform:scale(1); opacity:1;}
+}
+@keyframes fadeInMinToMax{
+  0%{ transform:scale(0); opacity:0;}
+  100%{ transform:scale(1); opacity:1;}
+}
+
+/**********************************/
+.flashMaxMin-active{
+  animation: flashMaxMin .5s;
+}
+/*大小闪动变化 变小*/
+@-webkit-keyframes flashMaxMin{
+  0%{ -webkit-transform:scale(1);}
+  100%{ -webkit-transform:scale(.98);}
+}
+@keyframes flashMaxMin{
+  0%{ transform:scale(1);}
+  100%{ transform:scale(.98);}
+}
+.flashMax-active{
+  animation: flashMax .5s;
+}
+/*大小闪动变化变大*/
+@-webkit-keyframes flashMax{
+  0%{ -webkit-transform:scale(1);}
+  100%{ -webkit-transform:scale(1.05);}
+}
+@keyframes flashMax{
+  0%{ transform:scale(1);}
+  100%{ transform:scale(1.05);}
+}
+
+/**********************************/
+.fadeIn-active{
+  animation: fadeIn 1.5s;
+}
+/*渐显*/
+@-webkit-keyframes fadeIn{
+  0%{ opacity:0;}
+  100%{ opacity:1;}
+}
+@keyframes fadeIn{
+  0%{ opacity:0;}
+  100%{ opacity:1;}
+}
+.fadeOut-active{
+  animation: fadeOut .5s;
+}
+/*渐隐*/
+@-webkit-keyframes fadeOut{
+  0%{ opacity:1;}
+  100%{ opacity:0;}
+}
+@keyframes fadeOut{
+  0%{ opacity:1;}
+  100%{ opacity:0;}
+}
